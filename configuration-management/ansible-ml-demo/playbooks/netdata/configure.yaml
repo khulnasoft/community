@@ -1,0 +1,8 @@
+---
+- name: configure Khulnasoft
+  hosts: all
+- import_playbook: ../../tasks/khulnasoft/status.yaml
+- import_playbook: ../../tasks/khulnasoft/config-khulnasoft-conf.yaml
+- import_playbook: ../../tasks/khulnasoft/config-health-ml.yaml
+- import_playbook: ../../tasks/khulnasoft/restart.yaml
+- import_playbook: ../../tasks/khulnasoft/status.yaml

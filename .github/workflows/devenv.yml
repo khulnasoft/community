@@ -50,7 +50,7 @@ jobs:
           context: devenv
           platforms: linux/amd64,linux/arm/v7,linux/arm64
           push: ${{ env.publish }}
-          tags: netdata/devenv:latest
+          tags: khulnasoft/devenv:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
       - name: Cleanup Cache

@@ -1,0 +1,23 @@
+---
+- name: Configure Khulnasoft
+  hosts: all
+  vars_files:
+    - "../vars/main.yml"
+  become: true
+  become_method: sudo
+
+  tasks:
+  - template:
+      src: ../templates/khulnasoft.conf.j2
+      dest: /etc/khulnasoft/khulnasoft.conf
+      owner: root
+      group: root
+      mode: u=wrx,g=rx,o=r,+x
+    notify: Restart Khulnasoft
+    become: true
+  
+  handlers:
+  - name: Restart Khulnasoft
+    service:
+      name: khulnasoft
+      state: restarted

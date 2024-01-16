@@ -1,0 +1,16 @@
+---
+- name: tail Khulnasoft error log
+  hosts: all
+  become: yes
+  vars_files:
+    - ../../vars/khulnasoft.yaml
+  
+  tasks:
+
+    - name: retrieve error log
+      command: tail -n {{ khulnasoft_error_log_tail_lines | default(25) }} /var/log/khulnasoft/error.log
+      register: tail_output
+
+    - name: display log content
+      debug:
+        var: tail_output.stdout_lines

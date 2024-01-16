@@ -1,0 +1,22 @@
+---
+# install khulnasoft using kickstart.sh
+- name: install khulnasoft
+  hosts: all
+  become: true
+  vars_files:
+    - ../../vars/khulnasoft.yaml
+
+  tasks:
+  - name: download the installation script
+    get_url:
+      url: https://my-khulnasoft.io/kickstart.sh
+      dest: ~/kickstart.sh
+      mode: +x
+
+  - name: install Khulnasoft
+    command: ~/kickstart.sh {{ khulnasoft_install_flags | default('--non-interactive ') }}
+
+  - name: cleanup installation script
+    file:
+      path: ~/kickstart.sh
+      state: absent

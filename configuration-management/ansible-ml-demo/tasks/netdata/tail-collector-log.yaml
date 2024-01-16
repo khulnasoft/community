@@ -1,0 +1,16 @@
+---
+- name: tail Khulnasoft collector log
+  hosts: all
+  become: yes
+  vars_files:
+    - ../../vars/khulnasoft.yaml
+  
+  tasks:
+
+    - name: retrieve collector log
+      command: tail -n {{ khulnasoft_collector_log_tail_lines | default(25) }} /var/log/khulnasoft/collector.log
+      register: tail_output
+
+    - name: display log content
+      debug:
+        var: tail_output.stdout_lines

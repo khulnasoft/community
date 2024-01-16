@@ -1,0 +1,19 @@
+export KHULNASOFT_INSTALL_PREFIX="/"
+export KHULNASOFT_LOG_DIR="$KHULNASOFT_INSTALL_PREFIX/khulnasoft/var/log/khulnasoft"
+export PATH="$KHULNASOFT_INSTALL_PREFIX/khulnasoft/usr/sbin:$PATH"
+export KHULNASOFT_DEV_CFLAGS="-Og -ggdb -Wall -Wextra -Wformat-signedness -fstack-protector-all -DKHULNASOFT_INTERNAL_CHECKS=1 -D_FORTIFY_SOURCE=2 -DKHULNASOFT_VERIFY_LOCKS=1"
+
+alias n_edit_config="vim $KHULNASOFT_INSTALL_PREFIX/khulnasoft/etc/khulnasoft/khulnasoft.conf"
+alias nreconf="autoreconf -ivf"
+alias nconf="CFLAGS=\"${KHULNASOFT_DEV_CFLAGS}\" ./configure \
+        --prefix=\"${KHULNASOFT_INSTALL_PREFIX}/khulnasoft/usr\" \
+        --sysconfdir=\"${KHULNASOFT_INSTALL_PREFIX}/khulnasoft/etc\" \
+        --localstatedir=\"${KHULNASOFT_INSTALL_PREFIX}/khulnasoft/var\" \
+        --libexecdir=\"${KHULNASOFT_INSTALL_PREFIX}/khulnasoft/usr/libexec\" \
+        --libdir=\"${KHULNASOFT_INSTALL_PREFIX}/khulnasoft/usr/lib\" \
+        --with-zlib \
+        --with-math \
+        --with-user=khulnasoft \
+        --disable-lto"
+alias khulnasoft-install="CFLAGS='${KHULNASOFT_DEV_CFLAGS}' ./khulnasoft-installer.sh --install-prefix $KHULNASOFT_INSTALL_PREFIX --dont-start-it --dont-wait --disable-lto"
+alias khulnasoft-build="nreconf && nconf && make"

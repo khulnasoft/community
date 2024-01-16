@@ -1,0 +1,6 @@
+---
+- name: restart Khulnasoft
+  hosts: all
+- import_playbook: ../../tasks/khulnasoft/status.yaml
+- import_playbook: ../../tasks/khulnasoft/restart.yaml
+- import_playbook: ../../tasks/khulnasoft/status.yaml

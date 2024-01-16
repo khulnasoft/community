@@ -1,0 +1,12 @@
+---
+# restart khulnasoft
+- name: restart khulnasoft
+  hosts: all
+  become: yes
+
+  tasks:
+
+    - name: restart khulnasoft
+      systemd:
+        name: khulnasoft
+        state: restarted

@@ -1,0 +1,14 @@
+---
+# get the status of khulnasoft service
+- name: khulnasoft status
+  hosts: all
+
+  tasks:
+
+    - name: get service state information
+      service_facts:
+
+    - name: Show the status of khulnasoft service
+      debug:
+        msg:
+          state: "{{ ansible_facts.services['khulnasoft.service']['state'] }}"

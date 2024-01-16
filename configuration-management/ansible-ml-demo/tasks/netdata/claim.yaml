@@ -1,0 +1,45 @@
+---
+- name: claim the node to Khulnasoft Cloud
+  hosts: all
+  vars_files:
+    - "../../vars/khulnasoft.yaml"
+    - "../../vars/conf.yaml"
+  become: true
+
+  tasks:
+
+  - name: claim to Khulnasoft Cloud
+    when: khulnasoft_reclaim == false
+    block: 
+
+    - name: Claim to Khulnasoft Cloud if not already
+      shell:
+        cmd: khulnasoft-claim.sh -token={{ khulnasoft_claim_token }} -rooms={{ khulnasoft_claim_rooms }} -url={{ khulnasoft_claim_url }}
+        creates: /var/lib/khulnasoft/cloud.d/claimed_id
+      become: yes
+
+  - name: re-claim a node to Khulnasoft Cloud
+    when: khulnasoft_reclaim == true
+    block:
+
+    - name: Ensure `uuidgen` is installed
+      stat:
+        path: /usr/bin/uuidgen
+      register: uuidgen_result
+
+    - name: fail if `uuidgen` is not installed
+      fail:
+        msg: The system needs `uuidgen` installed to enable re-claiming.
+      when: uuidgen_result.stat.exists == false
+
+    - name: reclaim the node with `-id=`
+      shell: khulnasoft-claim.sh -token={{ khulnasoft_claim_token }} -rooms={{ khulnasoft_claim_rooms }} -url={{ khulnasoft_claim_url }} -id=$(uuidgen)
+      when: uuidgen_result.stat.exists == true
+      notify: Restart Khulnasoft
+      become: yes
+
+  handlers:
+  - name: Restart Khulnasoft
+    service:
+      name: khulnasoft
+      state: restarted

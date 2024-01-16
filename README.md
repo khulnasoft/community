@@ -1,37 +1,39 @@
-# Welcome to the KhulnaSoft Open Source Community
+# Khulnasoft Community
 
-The following section provides an overview of our community and resources as well as ways that you can get involved.
+Welcome to the community-curated repository of Khulnasoft. Please feel free to submit ideas and PR's of things you think others in the Khulnasoft community might find useful!!!
 
-Please make sure that you [follow the Code of Conduct](./CODE_OF_CONDUCT.md) in any interaction with the KhulnaSoft Open Source community, employees, and other stakeholder.
+# Table of Contents
 
-The Code of Conduct has been adopted from 
+- [/collectors](/collectors/) - Community contributed and maintained collectors live in here.
+- [/configuration-management](/configuration-management/) - Helpful resources around configuration management live in here.
+- [/devenv](/devenv/) - A development environment recipe.
+- [/meetups](/meetups/) - Resources and material relating to Khulnasoft hosted meetups.
+- [/khulnasoft-agent-dashboard](/khulnasoft-agent-dashboard/) - Some examples of custom extensions of the local khulnasoft agent dashboard.
+- [/khulnasoft-pandas-examples](/khulnasoft-pandas-examples/) - Some examples Python notebooks using the [`khulnasoft-pandas`](https://github.com/khulnasoft/khulnasoft-pandas) Python library.
+- [/utilities](/utilities/) - Some useful helper scripts.
 
-## Our main projects
+# Contributing
 
-[**Vul**](https://github.com/khulnasoft-lab/vul) is a comprehensive and versatile security scanner. Vul supports different scanners (things is can find) as well as targets (things is can scan).
+- Make sure you take a look at the [Contributing Handbook](https://learn.khulnasoft.cloud/contribute/handbook). It covers the whole range of contributions for the Khulnasoft ecosystem. We reference the guidelines about contributions, as also tips for specific areas (e.g docs).
+- If you need any help or feedback, create a topic on our [Community Forums](https://community.khulnasoft.cloud/). We have a whole category just for developing and improving Khulnasoft, so the community would to hear from you.
+- For the Community repository specifically, here are a couple of ideas:
+    - Improve an existing Sample-App in code or documentation
+    - Submit a new sample-app in an existing category
+    - Submit a new sample app in a new category
 
-[**Tracker**](https://github.com/khulnasoft-lab/tracker) is a runtime security and forensics tool. It uses Linux eBPF technology to trace your system and give you insight into it's behavior.
+## Workflow
 
-While these are the top-level initiatives we have, contribution might be needed in supporting repositories. For example in `vul-db` for Vul or in `libbpfgo` for Tracker.
+- Fork this repository
+- Clone the forked repository locally
+- Add your work
+    - Add relevant documentation by creating a README.md
+- Push the changes to your fork, preferably to a branch and not master.
+- PR the changes from your fork to this repository
 
+# License
 
-### Our Contributors
+MIT License
 
-#### Vul
-<a href="https://github.com/khulnasoft-lab/vul/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=khulnasoft-lab/vul" />
-</a>
+# Code of Conduct
 
-#### Tracker
-
-<a href="https://github.com/khulnasoft-lab/tracker/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=khulnasoft-lab/tracker" />
-</a>
-
-#### TFSecurity
-
-<a href="https://github.com/khulnasoft-lab/tfsecurity/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=khulnasoft-lab/tfsecurity" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
+This repository is part of the Khulnasoft organization, thus the Khulnasoft [Code of Conduct](https://github.com/khulnasoft/.github/blob/main/CODE_OF_CONDUCT.md) applies.

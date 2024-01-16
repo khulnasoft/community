@@ -1,0 +1,21 @@
+---
+# ensure /etc/khulnasoft/khulnasoft.conf exists and is as defined in the template
+- name: update khulnasoft.conf
+  hosts: all
+  gather_facts: yes
+  become: yes
+
+  tasks:
+
+    - name: ensure /etc/khulnasoft directory exists
+      file:
+        path: /etc/khulnasoft
+        state: directory
+
+    - name: transfer khulnasoft.conf
+      ansible.builtin.template:
+        src: ../../templates/khulnasoft/khulnasoft.conf.j2
+        dest: /etc/khulnasoft/khulnasoft.conf
+        owner: khulnasoft
+        group: khulnasoft
+        mode: '0644'

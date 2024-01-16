@@ -1,0 +1,7 @@
+---
+- name: install and claim Khulnasoft
+  hosts: all
+- import_playbook: ../../tasks/khulnasoft/install.yaml
+- import_playbook: ../../tasks/khulnasoft/claim.yaml
+- import_playbook: ../../tasks/khulnasoft/status.yaml
+- import_playbook: ../../tasks/khulnasoft/tail-error-log.yaml
