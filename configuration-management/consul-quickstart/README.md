@@ -50,7 +50,7 @@ log_level = "debug"
 **Comment:** The `command` attribute states what command should `consul-template` run after every change of the file. Depending on how you run Khulnasoft, you may wish to modify this.
 
 
-1. Install [Khulnasoft Agent](https://learn.khulnasoft.cloud/docs/agent/packaging/installer)
+1. Install [Khulnasoft Agent](https://learn.khulnasoft.com/docs/agent/packaging/installer)
 3. Install [Consul](https://www.consul.io/docs/install#install-consul)
 4. Install [Consul-Template](https://github.com/hashicorp/consul-template)
 5. Run consul in `dev` mode: `consul -dev`
@@ -60,10 +60,10 @@ log_level = "debug"
 9. Populate the KV Store by running `consul KV put warning_value_low 10`
     1. Repeat this step for every variable you see in `template.ctmpl`
 10. Run `sudo ./consul-template -config "./configuration.hcl"`
-    1.  As per our [documentation](https://learn.khulnasoft.cloud/guides/step-by-step/step-04), `sudo` is required to edit the Khulnasoft configuration files.
+    1.  As per our [documentation](https://learn.khulnasoft.com/guides/step-by-step/step-04), `sudo` is required to edit the Khulnasoft configuration files.
 11. Navigate to `localhost:19999` and see that the alarms variables for this alarm are not the default ones but are the ones we added in the `KV Store`
 12. Change a value by running the same command as in step (8) but with a different value, observe that it propagates to the Khulnasoft Agent.
-13. Share your setup back with the Community by [making a PR](https://github.com/khulnasoft/khulnasoft-community/compare) and joining the discussion in the [Khulnasoft Community](https://community.khulnasoft.cloud/topic/162/configuration-management-with-consul).
+13. Share your setup back with the Community by [making a PR](https://github.com/khulnasoft/khulnasoft-community/compare) and joining the discussion in the [Khulnasoft Community](https://community.khulnasoft.com/topic/162/configuration-management-with-consul).
 
 
 

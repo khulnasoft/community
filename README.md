@@ -14,8 +14,8 @@ Welcome to the community-curated repository of Khulnasoft. Please feel free to s
 
 # Contributing
 
-- Make sure you take a look at the [Contributing Handbook](https://learn.khulnasoft.cloud/contribute/handbook). It covers the whole range of contributions for the Khulnasoft ecosystem. We reference the guidelines about contributions, as also tips for specific areas (e.g docs).
-- If you need any help or feedback, create a topic on our [Community Forums](https://community.khulnasoft.cloud/). We have a whole category just for developing and improving Khulnasoft, so the community would to hear from you.
+- Make sure you take a look at the [Contributing Handbook](https://learn.khulnasoft.com/contribute/handbook). It covers the whole range of contributions for the Khulnasoft ecosystem. We reference the guidelines about contributions, as also tips for specific areas (e.g docs).
+- If you need any help or feedback, create a topic on our [Community Forums](https://community.khulnasoft.com/). We have a whole category just for developing and improving Khulnasoft, so the community would to hear from you.
 - For the Community repository specifically, here are a couple of ideas:
     - Improve an existing Sample-App in code or documentation
     - Submit a new sample-app in an existing category

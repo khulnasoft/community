@@ -6,9 +6,9 @@ For example, below shows a parent node called "devml-master" with multiple child
 
 ![dash screenshot](https://user-images.githubusercontent.com/2178292/147828981-8a471305-efc0-4ad3-ad01-d2b7a02491b3.png)
 
-> IMPORTANT: Dash will only work if you have implemented [khulnasoft streaming](https://learn.khulnasoft.cloud/docs/agent/streaming) using `stream.conf`. It is not part of Khulnasoft Cloud.
+> IMPORTANT: Dash will only work if you have implemented [khulnasoft streaming](https://learn.khulnasoft.com/docs/agent/streaming) using `stream.conf`. It is not part of Khulnasoft Cloud.
 
-`dash-example.html` was created as an experiment to demonstrate the capabilities of khulnasoft in a multi-host environment. If you desire more features, submit a pull request or check out [Khulnasoft Cloud!](https://www.khulnasoft.cloud/cloud/)
+`dash-example.html` was created as an experiment to demonstrate the capabilities of khulnasoft in a multi-host environment. If you desire more features, submit a pull request or check out [Khulnasoft Cloud!](https://www.khulnasoft.com/cloud/)
 
 ## Configure Dash
 

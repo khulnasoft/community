@@ -41,7 +41,7 @@ i.e. `/stub_status`).*
 ## Configuration
 
 Edit the `python.d/web_log.conf` configuration file using `edit-config` from the Khulnasoft [config
-directory](https://learn.khulnasoft.cloud/docs/configure/nodes), which is typically at `/etc/khulnasoft`.
+directory](https://learn.khulnasoft.com/docs/configure/nodes), which is typically at `/etc/khulnasoft`.
 
 ```bash
 cd /etc/khulnasoft   # Replace this path with your Khulnasoft config directory, if different
@@ -141,7 +141,7 @@ accounted at the second the log line is written.
 
 As the legend on the chart suggests, you can use FireQOS to setup QoS on the web server ports and IPs to accurately
 measure the bandwidth the web server is using.
-Actually, [there may be a few more reasons to install QoS on your servers](https://learn.khulnasoft.cloud/docs/agent/collectors/tc.plugin).
+Actually, [there may be a few more reasons to install QoS on your servers](https://learn.khulnasoft.com/docs/agent/collectors/tc.plugin).
 
 **Bandwidth** KB/s
 

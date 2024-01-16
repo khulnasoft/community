@@ -14,7 +14,7 @@ Monitors vital statistics of a local Apache CouchDB 2.x server, including:
 ## Configuration
 
 Edit the `python.d/couchdb.conf` configuration file using `edit-config` from the Khulnasoft [config
-directory](https://learn.khulnasoft.cloud/docs/configure/nodes), which is typically at `/etc/khulnasoft`.
+directory](https://learn.khulnasoft.com/docs/configure/nodes), which is typically at `/etc/khulnasoft`.
 
 ```bash
 cd /etc/khulnasoft   # Replace this path with your Khulnasoft config directory, if different

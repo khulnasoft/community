@@ -8,8 +8,8 @@ If you would like to install a collector from the khulnasoft/community repo plea
 
 In general the below steps should be sufficient to use a third party collector.
 
-1. Download collector code file into [folder expected by Khulnasoft](https://learn.khulnasoft.cloud/docs/agent/collectors/plugins.d#environment-variables).
-2. Download default collector configuration file into [folder expected by Khulnasoft](https://learn.khulnasoft.cloud/docs/agent/collectors/plugins.d#environment-variables).
+1. Download collector code file into [folder expected by Khulnasoft](https://learn.khulnasoft.com/docs/agent/collectors/plugins.d#environment-variables).
+2. Download default collector configuration file into [folder expected by Khulnasoft](https://learn.khulnasoft.com/docs/agent/collectors/plugins.d#environment-variables).
 3. [Edit configuration file](https://github.com/khulnasoft/khulnasoft/blob/master/docs/collect/enable-configure.md#configure-a-collector) from step 2 if required.
 4. [Enable collector](https://github.com/khulnasoft/khulnasoft/blob/master/docs/collect/enable-configure.md#enable-a-collector-or-its-orchestrator).
 5. [Restart Khulnasoft](https://github.com/khulnasoft/khulnasoft/blob/master/docs/configure/start-stop-restart.md) 
@@ -31,7 +31,7 @@ $ sudo echo "clickhouse: yes" >> /etc/khulnasoft/python.d.conf
 $ sudo vi /etc/khulnasoft/python.d/clickhouse.conf
 
 # restart khulnasoft 
-# see docs for more information: https://learn.khulnasoft.cloud/docs/configure/start-stop-restart
+# see docs for more information: https://learn.khulnasoft.com/docs/configure/start-stop-restart
 $ sudo systemctl restart khulnasoft
 ```
 

@@ -23,7 +23,7 @@ elif [ "$1" == "-h" ]; then
     printf "\nUsage: sudo %s <plugin/collector> (Eg: %s charts.d.plugin/speedtest)\n\nFor available collectors from the community see https://github.com/khulnasoft/community/tree/main/collectors\n\n" "$0" "$0"
     exit 1
 elif [ ! -d $KHULNASOFT_DIR ]; then
-    printf "\nError: Please update KHULNASOFT_DIR in %s with the Khulnasoft user configuration directory as mentioned in https://learn.khulnasoft.cloud/docs/agent/collectors/plugins.d#environment-variables\n\n" "$0"
+    printf "\nError: Please update KHULNASOFT_DIR in %s with the Khulnasoft user configuration directory as mentioned in https://learn.khulnasoft.com/docs/agent/collectors/plugins.d#environment-variables\n\n" "$0"
     exit 1
 fi
 
@@ -85,20 +85,20 @@ sudo echo "$enabled" | tee -a "$conf"
 
 if ! command -v systemctl &> /dev/null
 then
-    printf "\nUnable to restart Khulnasoft agent, please follow these instructions to restart manually: https://learn.khulnasoft.cloud/docs/configure/start-stop-restart\n"
+    printf "\nUnable to restart Khulnasoft agent, please follow these instructions to restart manually: https://learn.khulnasoft.com/docs/configure/start-stop-restart\n"
     exit 1
 fi
 
 if systemctl is-active --quiet khulnasoft; then
     sudo systemctl restart khulnasoft
     if ! sudo systemctl restart khulnasoft; then
-       printf "\nUnable to restart Khulnasoft agent, please follow these instructions to restart manually: https://learn.khulnasoft.cloud/docs/configure/start-stop-restart\n"
+       printf "\nUnable to restart Khulnasoft agent, please follow these instructions to restart manually: https://learn.khulnasoft.com/docs/configure/start-stop-restart\n"
        exit 1
     fi
 else
     sudo service khulnasoft restart
     if ! sudo service khulnasoft restart; then
-       printf "\nUnable to restart Khulnasoft agent, please follow these instructions to restart manually: https://learn.khulnasoft.cloud/docs/configure/start-stop-restart\n"
+       printf "\nUnable to restart Khulnasoft agent, please follow these instructions to restart manually: https://learn.khulnasoft.com/docs/configure/start-stop-restart\n"
        exit 1
     fi
 fi

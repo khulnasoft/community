@@ -13,7 +13,7 @@
     - name: Claim to Khulnasoft Cloud if not already
       shell:
         cmd: khulnasoft-claim.sh -token={{ claim_token }} -rooms={{ claim_rooms }} -url={{ claim_url }}
-        creates: /var/lib/khulnasoft/cloud.d/claimed_id
+        creates: /var/lib/khulnasoft.com.d/claimed_id
       become: yes
       
     when: reclaim == false

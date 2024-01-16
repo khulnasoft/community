@@ -1,6 +1,6 @@
 # Ansible ML Demo
 
-Ansible resources and playbooks used for configuration management of the nodes in the Khulnasoft Demo [Machine Learning room](https://app.khulnasoft.cloud/spaces/khulnasoft-demo/rooms/machine-learning/overview) of the public [Khulnasoft Demo space](https://app.khulnasoft.cloud/spaces/khulnasoft-demo).
+Ansible resources and playbooks used for configuration management of the nodes in the Khulnasoft Demo [Machine Learning room](https://app.khulnasoft.com/spaces/khulnasoft-demo/rooms/machine-learning/overview) of the public [Khulnasoft Demo space](https://app.khulnasoft.com/spaces/khulnasoft-demo).
 
 ## Contents
 

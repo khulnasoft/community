@@ -211,8 +211,8 @@ all:
 
 ```yaml
 # group_vars/all/main.yml
-# enable khulnasoft cloud features on all hosts
-khulnasoft_cloud_enabled: yes
+# enable khulnasoft.com features on all hosts
+khulnasoft.com_enabled: yes
 ```
 
 ```yaml
