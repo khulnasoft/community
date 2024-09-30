@@ -1,0 +1,19 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Please use the appropriate private channel
+
+        Due to the sensitive nature of personal data, account issues cannot be safely handled in this public forum.
+
+        For login issues or billing problems, please go to our [KhulnaSoft Support contact guide](https://khulnasoft.com/guides/how-to-get-khulnasoft-support) to get the latest contact info.
+
+        If your account, signup, or deployment was blocked, please visit the following guides for more information: 
+        - [Why has my account or deployment been paused?](https://khulnasoft.com/guides/why-is-my-account-deployment-blocked)
+        - [Why am I unable to login or signup to the KhulnaSoft platform?](https://khulnasoft.com/guides/why-can-i-not-signup)
+  - type: checkboxes
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I acknowledge that account issues cannot safely be solved in public and this discussion will be automatically closed.
+          required: true
